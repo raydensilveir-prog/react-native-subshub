@@ -4,7 +4,7 @@
     "slug": "NewApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/assets/images/icon.png",
     "scheme": "newapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

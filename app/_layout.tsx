@@ -3,8 +3,9 @@ import '@/global.css';
 import {useFonts} from "expo-font";
 import {useEffect} from "react";
 
+SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
-  const [fontsLoaded] =useFonts({
+  const [fontsLoaded, fontError] =useFonts({
     'sans-regular':require('../assets/assets/fonts/PlusJakartaSans-Regular.ttf'),
     'sans-bold':require('../assets/assets/fonts/PlusJakartaSans-Bold.ttf'),
     'sans-medium':require('../assets/assets/fonts/PlusJakartaSans-Medium.ttf'),
@@ -14,10 +15,10 @@ export default function RootLayout() {
   })
 
   useEffect(()=>{
-   if(fontsLoaded){
-     SplashScreen.hideAsync()
+   if(fontsLoaded || fontError){
+     void SplashScreen.hideAsync()
    }
-  },[fontsLoaded])
-  if(!fontsLoaded) return null;
+  },[fontsLoaded, fontError])
+  if(!fontsLoaded && !fontError) return null;
   return <Stack screenOptions={{headerShown:false}} />;
 }

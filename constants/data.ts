@@ -13,7 +13,7 @@ export const HOME_USER = {
 
 export const HOME_BALANCE = {
     amount: 2489.48,
-    nextRenewalDate: "2026-03-18T09:00:00.000Z",
+    nextRenewalDate: "2026-09-18T09:00:00.000Z",
 };
 
 export const UPCOMING_SUBSCRIPTIONS: UpcomingSubscription[] = [
@@ -56,7 +56,7 @@ export const HOME_SUBSCRIPTIONS: Subscription[] = [
         price: 77.49,
         currency: "USD",
         billing: "Monthly",
-        renewalDate: "2026-03-20T10:00:00.000Z",
+        renewalDate: "2026-09-20T10:00:00.000Z",
         color: "#f5c542",
     },
     {
@@ -71,7 +71,7 @@ export const HOME_SUBSCRIPTIONS: Subscription[] = [
         price: 9.99,
         currency: "USD",
         billing: "Monthly",
-        renewalDate: "2026-03-24T10:00:00.000Z",
+        renewalDate: "2026-09-24T10:00:00.000Z",
         color: "#e8def8",
     },
     {

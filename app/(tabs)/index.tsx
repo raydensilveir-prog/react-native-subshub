@@ -51,7 +51,7 @@ const [expandedSubscriptionId,setExpandedSubscriptionID] = useState<string | nul
                                 ListEmptyComponent={<Text className="home-empty-state">No upcoming subscription</Text>}
                             />
                         </View>
-                        <ListHeading title="All Subscription"/>
+                        <ListHeading title="All Subscriptions"/>
                     </>
                 ) }
                 data={HOME_SUBSCRIPTIONS}

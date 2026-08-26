@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e46becd-1aca-414a-a2ae-82a81d857acc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/ListHeading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SubscriptionCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UpcomingSubscriptionCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/images.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets/images/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/assets/images/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="96" />
+    <option name="cachedIndexableFilesCount" value="98" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,61 +36,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.9728803069047755E-141" />
-      <entry key="MS500" value="7.845768414928533E-29" />
-      <entry key="S2" value="9.411547678909485E-8" />
-      <entry key="S5" value="0.0015636709425977523" />
-      <entry key="S10" value="0.04505844994899874" />
-      <entry key="S30" value="0.6233925531798745" />
-      <entry key="S60" value="1.3356757719842793" />
-      <entry key="M2" value="1.9903506135628273" />
-      <entry key="M5" value="2.5425253389482836" />
-      <entry key="M10" value="2.7625222011994506" />
-      <entry key="M15" value="2.8892016827801785" />
-      <entry key="M30" value="5.001949168536057" />
-      <entry key="H1" value="19.91322262854266" />
-      <entry key="H2" value="74.7032889580143" />
-      <entry key="H4" value="206.53297409398846" />
-      <entry key="D1" value="654.5476145803563" />
-      <entry key="W1" value="823.9716451712171" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000329838611842" />
+      <entry key="S2" value="1.1534765849356923" />
+      <entry key="S5" value="1.8493966642553739" />
+      <entry key="S10" value="2.928411370158102" />
+      <entry key="S30" value="5.083442791758019" />
+      <entry key="S60" value="6.540934441325863" />
+      <entry key="M2" value="8.156786370673561" />
+      <entry key="M5" value="11.869021955262825" />
+      <entry key="M10" value="16.388079835007055" />
+      <entry key="M15" value="19.93539821538005" />
+      <entry key="M30" value="35.57126203894816" />
+      <entry key="H1" value="91.10717916197996" />
+      <entry key="H2" value="224.45841094189808" />
+      <entry key="H4" value="449.6628680947474" />
+      <entry key="D1" value="1175.3784931269468" />
+      <entry key="W1" value="1479.5669960076063" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="2.139185607612252E-278" />
-      <entry key="S30" value="4.767514658670663E-93" />
-      <entry key="S60" value="1.269487952822215E-46" />
-      <entry key="M2" value="3.1545693909410043E-23" />
-      <entry key="M5" value="5.495158325868135E-9" />
-      <entry key="M10" value="3.3981891276858975E-4" />
-      <entry key="M15" value="0.01359472500015486" />
-      <entry key="M30" value="0.5672683388793905" />
-      <entry key="H1" value="4.707117022055054" />
-      <entry key="H2" value="22.37471790115923" />
-      <entry key="H4" value="66.8118495781405" />
-      <entry key="D1" value="203.3752755824436" />
-      <entry key="W1" value="250.91484640793186" />
+      <entry key="MS100" value="3.20623771708842E-99" />
+      <entry key="MS500" value="2.0007791073912164E-20" />
+      <entry key="S2" value="1.18932291309469E-5" />
+      <entry key="S5" value="0.010718204824780144" />
+      <entry key="S10" value="0.10375820234140094" />
+      <entry key="S30" value="0.5307985964540255" />
+      <entry key="S60" value="0.9347701216632401" />
+      <entry key="M2" value="1.4408407112460202" />
+      <entry key="M5" value="3.4682066468970625" />
+      <entry key="M10" value="6.642775161787494" />
+      <entry key="M15" value="9.11213564793705" />
+      <entry key="M30" value="19.1609429545855" />
+      <entry key="H1" value="49.76054723206366" />
+      <entry key="H2" value="103.71539614150474" />
+      <entry key="H4" value="177.0597553731274" />
+      <entry key="D1" value="391.37347646609373" />
+      <entry key="W1" value="476.9462182668727" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000940174778" />
-      <entry key="S5" value="1.0015595203788341" />
-      <entry key="S10" value="1.0443952226016329" />
-      <entry key="S30" value="1.6118683674260732" />
-      <entry key="S60" value="2.320134825226803" />
-      <entry key="M2" value="2.9775842745518712" />
-      <entry key="M5" value="3.5356459794958663" />
-      <entry key="M10" value="3.759061074462924" />
-      <entry key="M15" value="3.9001274734464406" />
-      <entry key="M30" value="6.566835803773941" />
-      <entry key="H1" value="25.61561828296832" />
-      <entry key="H2" value="98.06868854967419" />
-      <entry key="H4" value="274.33137487030854" />
-      <entry key="D1" value="858.9158479577626" />
-      <entry key="W1" value="1075.8852357509895" />
+      <entry key="MS100" value="0.6155722066724582" />
+      <entry key="MS500" value="0.9078239329585457" />
+      <entry key="S2" value="1.126323858327112" />
+      <entry key="S5" value="1.8381094898137929" />
+      <entry key="S10" value="2.9879534972859183" />
+      <entry key="S30" value="5.534657993949809" />
+      <entry key="S60" value="7.399891180511428" />
+      <entry key="M2" value="9.538316080654221" />
+      <entry key="M5" value="15.290486606285791" />
+      <entry key="M10" value="22.992048611325334" />
+      <entry key="M15" value="29.013550842030803" />
+      <entry key="M30" value="54.69762667488064" />
+      <entry key="H1" value="140.8234020219568" />
+      <entry key="H2" value="328.12743002822623" />
+      <entry key="H4" value="626.683153271429" />
+      <entry key="D1" value="1566.7376027940318" />
+      <entry key="W1" value="1956.5107122766296" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -103,10 +111,10 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rayde/PycharmProjects/NewApp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rayde/PycharmProjects/NewApp/assets/assets/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -121,6 +129,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rayde\PycharmProjects\NewApp\assets\assets\images" />
       <recent name="C:\Users\rayde\PycharmProjects\NewApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -146,11 +155,24 @@
       <workItem from="1786601292764" duration="10449000" />
       <workItem from="1786683403208" duration="14196000" />
       <workItem from="1787291402476" duration="975000" />
-      <workItem from="1787554742435" duration="2296000" />
+      <workItem from="1787554742435" duration="7579000" />
+      <workItem from="1787662888388" duration="7442000" />
+      <workItem from="1787725291661" duration="8735000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

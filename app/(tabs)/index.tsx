@@ -16,6 +16,11 @@ import React,{useState} from "react";
 
 const SafeAreaView=styled(RNSafeAreaView)
 
+/**
+ * Home screen component that displays user profile, balance, and subscription lists.
+ * Shows upcoming subscriptions horizontally and all subscriptions in an expandable vertical list.
+ * @returns {JSX.Element} The home screen UI with subscription management.
+ */
 export default function App() {
 const [expandedSubscriptionId,setExpandedSubscriptionID] = useState<string | null>(null)
 const {user} = useUser()

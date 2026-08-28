@@ -12,6 +12,11 @@ const SafeAreaView = styled(RNSafeAreaView);
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/**
+ * Extracts a user-friendly error message from authentication errors.
+ * @param {unknown} error - The error object to extract a message from.
+ * @returns {string} A formatted error message for display.
+ */
 const getAuthErrorMessage = (error: unknown) => {
     if (isClerkAPIResponseError(error)) {
         return error.errors[0]?.longMessage || error.errors[0]?.message || "We could not complete that request.";
@@ -20,6 +25,11 @@ const getAuthErrorMessage = (error: unknown) => {
     return "Something went wrong. Please try again.";
 };
 
+/**
+ * Sign-in screen component that handles user authentication with email and password.
+ * Validates input, manages form state, and redirects to tabs upon successful sign-in.
+ * @returns {JSX.Element} The sign-in screen UI.
+ */
 const SignIn = () => {
     const {fetchStatus, signIn} = useSignIn();
     const [emailAddress, setEmailAddress] = useState("");
@@ -33,6 +43,10 @@ const SignIn = () => {
         [emailAddress, fetchStatus, isSubmitting, password]
     );
 
+    /**
+     * Validates email and password fields.
+     * @returns {boolean} True if all fields are valid, false otherwise.
+     */
     const validate = () => {
         const nextErrors: typeof fieldErrors = {};
         const email = emailAddress.trim();
@@ -51,6 +65,10 @@ const SignIn = () => {
         return Object.keys(nextErrors).length === 0;
     };
 
+    /**
+     * Handles the sign-in form submission, validates input, and authenticates the user.
+     * @returns {Promise<void>}
+     */
     const handleSignIn = async () => {
         if (!validate() || isSubmitting || fetchStatus === "fetching") {
             return;

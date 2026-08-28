@@ -13,6 +13,11 @@ const SafeAreaView = styled(RNSafeAreaView);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const minPasswordLength = 8;
 
+/**
+ * Extracts a user-friendly error message from authentication errors.
+ * @param {unknown} error - The error object to extract a message from.
+ * @returns {string} A formatted error message for display.
+ */
 const getAuthErrorMessage = (error: unknown) => {
     if (isClerkAPIResponseError(error)) {
         return error.errors[0]?.longMessage || error.errors[0]?.message || "We could not complete that request.";
@@ -21,6 +26,11 @@ const getAuthErrorMessage = (error: unknown) => {
     return "Something went wrong. Please try again.";
 };
 
+/**
+ * Sign-up screen component that handles new user registration with email verification.
+ * Manages account creation and email verification flow with multi-step form.
+ * @returns {JSX.Element} The sign-up screen UI.
+ */
 const SignUp = () => {
     const {fetchStatus, signUp} = useSignUp();
     const [fullName, setFullName] = useState("");
@@ -51,6 +61,10 @@ const SignUp = () => {
         return fullName.trim().length > 0 && emailAddress.trim().length > 0 && password.length > 0 && confirmPassword.length > 0;
     }, [code, confirmPassword, emailAddress, fetchStatus, fullName, isSubmitting, isVerifying, password]);
 
+    /**
+     * Validates account creation form fields including name, email, and password.
+     * @returns {boolean} True if all account fields are valid, false otherwise.
+     */
     const validateAccountDetails = () => {
         const nextErrors: typeof fieldErrors = {};
         const email = emailAddress.trim();
@@ -81,6 +95,10 @@ const SignUp = () => {
         return Object.keys(nextErrors).length === 0;
     };
 
+    /**
+     * Validates the email verification code.
+     * @returns {boolean} True if the verification code is valid, false otherwise.
+     */
     const validateCode = () => {
         const nextErrors: typeof fieldErrors = {};
 
@@ -94,6 +112,10 @@ const SignUp = () => {
         return Object.keys(nextErrors).length === 0;
     };
 
+    /**
+     * Handles account creation form submission, creates user account, and sends verification email.
+     * @returns {Promise<void>}
+     */
     const handleCreateAccount = async () => {
         if (!validateAccountDetails() || isSubmitting || fetchStatus === "fetching") {
             return;
@@ -131,6 +153,10 @@ const SignUp = () => {
         }
     };
 
+    /**
+     * Handles email verification by validating the verification code and finalizing sign-up.
+     * @returns {Promise<void>}
+     */
     const handleVerify = async () => {
         if (!validateCode() || isSubmitting || fetchStatus === "fetching") {
             return;

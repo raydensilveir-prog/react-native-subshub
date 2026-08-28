@@ -13,6 +13,11 @@ if (!publishableKey) {
   throw new Error("Missing EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY in .env");
 }
 
+/**
+ * Root layout component that sets up Clerk authentication provider and loads custom fonts.
+ * Prevents splash screen auto-hide until fonts are loaded.
+ * @returns {JSX.Element | null} The root layout with authentication provider or null while loading.
+ */
 export default function RootLayout() {
   const [fontsLoaded, fontError] =useFonts({
     'sans-regular':require('../assets/assets/fonts/PlusJakartaSans-Regular.ttf'),

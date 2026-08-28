@@ -9,6 +9,12 @@ import images from "@/constants/images";
 
 
 const SafeAreaView=styled(RNSafeAreaView)
+
+/**
+ * Settings screen component that displays user account information and sign-out functionality.
+ * Shows user profile with name, email, and avatar, along with a sign-out button.
+ * @returns {JSX.Element} The settings screen UI.
+ */
 const Settings = () => {
   const {signOut} = useClerk();
   const {user, isLoaded} = useUser();
@@ -16,6 +22,10 @@ const Settings = () => {
   const displayName = user?.fullName || user?.firstName || user?.primaryEmailAddress?.emailAddress || "Your account";
   const profileImage = user?.imageUrl ? {uri: user.imageUrl} : images.avatar;
 
+  /**
+   * Handles user sign-out by calling Clerk's signOut and redirecting to sign-in screen.
+   * @returns {Promise<void>}
+   */
   const handleSignOut = async () => {
       if (isSigningOut) {
           return;

@@ -13,6 +13,7 @@ const Settings = () => {
   const {signOut} = useClerk();
   const {user, isLoaded} = useUser();
   const [isSigningOut, setIsSigningOut] = React.useState(false);
+  const [signOutError, setSignOutError] = React.useState("");
   const displayName = user?.fullName || user?.firstName || user?.primaryEmailAddress?.emailAddress || "Your account";
   const profileImage = user?.imageUrl ? {uri: user.imageUrl} : images.avatar;
 
@@ -22,9 +23,16 @@ const Settings = () => {
       }
 
       setIsSigningOut(true);
-      await signOut();
-      router.replace("/(auth)/sign-in");
-      setIsSigningOut(false);
+      setSignOutError("");
+
+      try {
+          await signOut();
+          router.replace("/(auth)/sign-in");
+      } catch {
+          setSignOutError("We could not sign you out. Please try again.");
+      } finally {
+          setIsSigningOut(false);
+      }
   };
 
   return(
@@ -62,6 +70,7 @@ const Settings = () => {
                       <Text className="auth-secondary-button-text">Sign out</Text>
                   )}
               </Pressable>
+              {signOutError ? <Text className="auth-error">{signOutError}</Text> : null}
           </View>
       </SafeAreaView>
   )

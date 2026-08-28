@@ -1,14 +1,17 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
 
+/**
+ * List heading component that displays a styled title for list sections.
+ * @param {ListHeadingProps} props - The component props.
+ * @param {string} props.title - The title text to display.
+ * @returns {JSX.Element} The list heading UI.
+ */
 const ListHeading = ({ title }:ListHeadingProps) => {
     return (
         <View className="list-head">
             <Text className="list-title">{title}</Text>
 
-            <TouchableOpacity className="list-action">
-                <Text className="list-action-text">View all</Text>
-            </TouchableOpacity>
         </View>
     );
 };

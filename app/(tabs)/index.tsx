@@ -1,9 +1,10 @@
 import "@/global.css"
+import {useUser} from "@clerk/expo";
 import {FlatList, Image, Text, View} from "react-native";
 import {SafeAreaView as RNSafeAreaView} from "react-native-safe-area-context";
 import {styled} from "nativewind";
 import images from "@/constants/images";
-import {HOME_BALANCE, HOME_SUBSCRIPTIONS, HOME_USER, UPCOMING_SUBSCRIPTIONS} from "@/constants/data";
+import {HOME_BALANCE, HOME_SUBSCRIPTIONS, UPCOMING_SUBSCRIPTIONS} from "@/constants/data";
 import {icons} from "@/constants/icons";
 import {formatCurrency} from "@/lib/utils";
 import dayjs from "dayjs";
@@ -15,8 +16,16 @@ import React,{useState} from "react";
 
 const SafeAreaView=styled(RNSafeAreaView)
 
+/**
+ * Home screen component that displays user profile, balance, and subscription lists.
+ * Shows upcoming subscriptions horizontally and all subscriptions in an expandable vertical list.
+ * @returns {JSX.Element} The home screen UI with subscription management.
+ */
 export default function App() {
 const [expandedSubscriptionId,setExpandedSubscriptionID] = useState<string | null>(null)
+const {user} = useUser()
+const displayName = user?.fullName || user?.firstName || user?.primaryEmailAddress?.emailAddress || "Your account"
+const profileImage = user?.imageUrl ? {uri: user.imageUrl} : images.avatar
   return (
     <SafeAreaView className='flex-1 bg-background p-5'>
 
@@ -25,8 +34,8 @@ const [expandedSubscriptionId,setExpandedSubscriptionID] = useState<string | nul
                     <>
                         <View className="home-header">
                             <View className="home-user">
-                                <Image source={images.avatar} className="home-avatar"/>
-                                <Text className="home-user-name">{HOME_USER.name}</Text>
+                                <Image source={profileImage} className="home-avatar"/>
+                                <Text className="home-user-name" numberOfLines={1}>{displayName}</Text>
                             </View>
                             <Image source={icons.add} className="home-add-icon"/>
                         </View>
@@ -51,7 +60,7 @@ const [expandedSubscriptionId,setExpandedSubscriptionID] = useState<string | nul
                                 ListEmptyComponent={<Text className="home-empty-state">No upcoming subscription</Text>}
                             />
                         </View>
-                        <ListHeading title="All Subscription"/>
+                        <ListHeading title="All Subscriptions"/>
                     </>
                 ) }
                 data={HOME_SUBSCRIPTIONS}
